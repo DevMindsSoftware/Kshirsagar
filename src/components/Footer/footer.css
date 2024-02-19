@@ -1,0 +1,35 @@
+.footerbgcolor{
+    background-color: #662602;
+    position: absolute;
+    /* top: -19px; */
+    width: 100%;
+}
+.icon-contact{
+    font-size: 20px;
+    color: #b66235;
+    margin-left: 0px !important;
+}
+.texcolorfoter{
+    color: #b66235;
+}
+.iconsfooter{
+    margin-right: 10px;
+}
+.hovrtext{
+    cursor: pointer;
+}
+
+.iconsfooter:hover{
+    cursor: pointer;
+    /* transform: scale(1, 1);
+    transition: transform 3s ease-in-out;
+    transform: scale(1.5, 1.5); */
+    transform: rotate(360deg);
+    transition: transform cubic-bezier(0,0,.2,1) .8s;
+}
+.lastfooter{
+background-color: #301303;
+color: white;
+text-align: center;
+padding: 10px;
+}

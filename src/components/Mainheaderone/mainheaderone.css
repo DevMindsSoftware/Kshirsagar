@@ -1,0 +1,235 @@
+.main-header-one {
+    position: relative;
+    display: block;
+    top: -95px;
+}
+.main-header {
+    width: 100%;
+    background: transparent;
+    transition: all 500ms ease;
+    z-index: 99;
+}
+.Devmindsmain-first-header {
+    position: relative;
+    display: block;
+    background: #2d303a;
+    padding: 5px 0px 5px;
+}
+.Devmindsmain-first-header .main-container {
+    position: static;
+    max-width: 1710px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+.Devmindsmain-inerheader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Devmindsmain-leftside-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.Devmindsmain-leftsidemenu {
+    position: relative;
+    display: block;
+    margin-right: 30px;
+}
+.Devmindsmain-leftheader {
+    position: relative;
+    display: block;
+    line-height: 0;
+    padding-left: 27px;
+}
+.Devmindsmain-leftheader li {
+    position: relative;
+    display: inline-block;
+    margin-right: 22px;
+}
+.Devmindsmain-leftheader::before {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    bottom: -5px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    content: "";
+}
+.Devmindsmain-leftheader li {
+    position: relative;
+    display: inline-block;
+    margin-right: 22px;
+}
+.DDevmindsmain-rightheader ul li .icon {
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.DDevmindsmain-rightheader ul li .icon span::before {
+    position: relative;
+    display: inline-block;
+    color:var(--allthimcolor);
+    font-size: 18px;
+    top: 1px;
+}
+.mail-icon{
+    position: relative;
+    display: inline-block;
+    color:var(--allthimcolor);
+    font-size: 18px;
+    top: 0px;
+}
+.DDevmindsmain-rightheader {
+    position: relative;
+    display: block;
+}
+.clock-icon{
+    position: relative;
+    display: inline-block;
+    color:var(--allthimcolor);
+    font-size: 18px;
+    top: 0px;
+}
+.Devmindsmain-leftheader li a {
+    color: rgba(255, 255, 255, 0.5);
+}
+.devminds-ullist, .devminds-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.DDevmindsmain-rightheader {
+    position: relative;
+    display: block;
+}
+.DDevmindsmain-rightheader ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-right: 30px;
+}
+.DDevmindsmain-rightheader ul li .icon {
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+.main-header-one__bottom {
+    position: relative;
+    display: block;
+    background-color: #ffffff;
+}
+.main-menu-one {
+    position: relative;
+    display: block;
+}
+.main-menu__wrapper {
+    position: relative;
+    display: block;
+}
+.DDevmindsmain-rightheader ul li .text {
+    position: relative;
+    display: block;
+    margin-left: 15px;
+    padding-top: 13px;
+}
+.main-menu-one .main-container {
+    max-width: 1710px;
+    padding-left: 23px;
+}
+.main-header-one__bottom .main-menu__wrapper-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-header-one__bottom-left {
+    position: relative;
+    display: block;
+}
+.main-header-one__bottom-right {
+    display: flex;
+    align-items: center;
+}
+.devmaindslogo_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height:var(--hederleftsideredhight);
+    padding-right: 27px;
+    z-index: 1;
+}
+.main-header-one__bottom-right {
+    display: flex;
+    align-items: center;
+}
+.main-menu-box {
+    display: block;
+    float: right;
+    margin-left: auto;
+}
+.main-menu .mobile-nav__toggler {
+    position: relative;
+    color: var(--thm-base);
+    font-size: 25px;
+    cursor: pointer;
+    transition: 500ms;
+}
+.main-header-one__bottom-right-number {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.main-header-one__bottom-right-number .text {
+    position: relative;
+    display: block;
+    margin-left: 14px;
+}
+.main-header-one__bottom-right-btn {
+    position: relative;
+    display: block;
+    margin-left: 50px;
+    line-height: 0;
+}
+.Devmindsmain-leftsidemenu li a {
+    position: relative;
+    display: inline-block;
+    color: #BCBDBE;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+.Devmindsmain-leftsidemenu li {
+    position: relative;
+    display: inline-block;
+    margin-right: 29px;
+}
+.DDevmindsmain-rightheader ul li .text p {
+    color: #BCBDBE;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+}
+.DDevmindsmain-rightheader ul li .text p a {
+    color: #BCBDBE;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+@media (min-width: 1200px){
+.main-menu .mobile-nav__toggler {
+    display: none;
+}
+}
+@media (max-width: 759px){
+.Devmindsmain-first-header {
+    display: none;
+}
+}

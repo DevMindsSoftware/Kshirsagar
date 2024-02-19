@@ -1,0 +1,105 @@
+:root {
+    --color1: #073a78;
+    --color2: #146edb;
+    --color3: #4190f0;
+    --color4: #8fbcf2;
+    --color5: #c2d8f2;
+    --thm-font: 'DM Sans', sans-serif;
+    --thm-font-2: 'Poppins', sans-serif;
+    --thm-black:black;
+    --text-white:white;
+    --headingFontSize: 20px ;
+    --heightlogo:65px;
+    --headerlogowidth: 70px;
+    --headermainheight: 110px;
+    --hederleftsideredhight: 94px;
+    --mainheaderlogo: 17px;
+    --drawerbuttonmobile: 23px;
+    --drawerbuttonmobileFontsize: 45px;
+    --mainheaderbackgroundcolor:  rgb(211 211 211 / 22%);
+    --thm-header-rgb: 235, 41, 44;
+    /* --thm-base-rgb: 178, 169, 169; */
+    --thm-gray: #676767;
+    /* #eb292c */
+    --allthimcolor:#e4652e;
+    --thm-font: system-ui,Segoe UI,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+  
+  }
+ * {
+  scroll-behavior: smooth;
+ }
+body {
+    color: var(--thm-gray);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: var(--thm-font);
+}
+.whatsappmaindiv{
+    position: absolute;
+}
+.bottom-whatsapp{
+    background: #0ecc0e;
+    width: 42px;
+    height: 43px;
+    position: fixed;
+    text-align: center;
+    border-radius: 45%;
+    bottom: 4%;
+    padding-top: 8px;
+    padding-left: 10px;
+    right: 5%;
+    z-index: 41;
+    padding-right: 13px;
+  }
+  .whatsappicon{
+    height: 27px !important;
+    color: var( --text-white) !important;
+  }
+  .on-hover-text {
+    background-color: #ffffff;
+    color: #333333;
+    position: absolute;
+    right: 51px;
+    padding: 5px;
+    width: 112px;
+    bottom: 5px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 7px 3px #767881;
+  }
+  .arrow{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: -2%;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    transform: rotate(135deg);
+  }
+  .on-hover-text a{
+    color: black !important;
+    text-decoration: none;
+  }
+
+  .devminds-uperarrowscroll{
+    background-color: var(--allthimcolor);
+    /* margin-top: 10px; */
+    width: 42px !important;
+    /* border-radius: 50%; */
+    position: fixed;
+    /* padding: 12px; */
+    align-items: center;
+    bottom: 26px;
+    left: 21px;
+    /* padding-top: 6px; */
+    text-align: center;
+    z-index: 999;
+    /* top: 319px; */
+    height: 42px ;
+    font-size: 18px;
+    color: var(--text-white);
+  }
+  .devminds-uperarrowscroll :hover{
+    background-color: var(--allthimcolor);
+  }

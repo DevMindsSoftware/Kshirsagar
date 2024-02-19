@@ -1,0 +1,87 @@
+.imageround{
+    width: 206px;
+    height: 195px;
+}
+.backrisors{
+    background-color: #f2eded;
+    padding-top: 42px;
+}
+.mainposition{
+    position: relative;
+    top: 84px;
+    z-index: 1;
+}
+.mainsatejetimag{
+    position: relative;
+}
+.textimg{
+    position: absolute;
+    top: 420px;
+    left: 28px;
+}
+
+.cardtext{
+    margin-top: 91px;
+    margin-bottom: 20px;
+}
+.txtend{
+    background-color: #fecfb5;
+    padding-top: 8px;
+    padding-bottom: 1px;
+    padding-left: 65px;
+}
+.agamisimage{
+    width: 100%;
+    height: 530px;
+
+}
+.main-divbox{
+    margin-top: 43px;
+    margin: 24px;
+}
+.maintext{
+    padding: 10px;
+    background-color: white;
+    color: #6d3e36;
+    font-weight: 800;
+    font-size: larger;
+}
+.titleagami{
+    color: #f2a775;
+    font-weight: 800;
+}
+
+.content-overlay {
+    background: rgba(255, 255, 255, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(9 6 6 / 17%) 40%, rgb(1 1 1 / 73%) 75%, rgb(21 9 9) 100%) repeat scroll 0 0;
+    position: relative;
+    margin-top: -218px;
+    height: 218px;
+  }
+  .agamihovr:hover{
+    cursor: pointer;
+    /* transform: scale(1, 1);
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1); */
+  }
+  .textimgdatabase {
+    position: absolute;
+    top: 387px;
+    margin-left: 64px;
+}
+.marquee-container {
+    /* animation: delay-marquee 5s forwards;
+    animation: marquee 3s linear infinite; */
+    transition-delay: 2s;
+    transition-delay: inherit;
+  }
+  /* .marqueetag{
+    position: absolute;
+  } */
+    
+ .maindivsetposition{
+    position: relative;
+    /* top: -430px;
+    left: 0px; */
+  }
+
+  

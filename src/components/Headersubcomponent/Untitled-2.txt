@@ -1,0 +1,110 @@
+import React, { useState } from "react";
+import { Container, Grid } from "@mui/material";
+import { Button, Drawer } from "antd";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import Appheaderlogo from "../../Headerpages/headerlogo";
+import Appimageheader from "../../Headerpages/imageheader";
+import DataHeader from "../../ServerData/dataheader";
+import "./header.css";
+import { MenuOutlined } from "@mui/icons-material";
+
+const Header = () => {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      let position = element.getBoundingClientRect();
+      window.scrollTo(position.left, position.top + window.scrollY - 145);
+    }
+    onClose();
+  };
+
+  return (
+    <div className="maindivheader ">
+      <div>
+        <Grid container spacing={2}>
+          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+            <Container maxWidth="sm">
+              <h3>
+                <Appheaderlogo />
+              </h3>
+            </Container>
+          </Grid>
+          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+            <Container maxWidth="sm">
+              <div className="desktopview">
+                {DataHeader.map((val, ind) => (
+                  <Appimageheader key={ind} src={val.src} height={val.height} width={val.width} />
+                ))}
+                {/* <Appimageheader /> */}
+              </div>
+
+              <div className="mobileVisible text-end">
+                <Button
+                  type=""
+                  onClick={showDrawer}
+                  className="drawerbuttonmobile"
+                >
+                  <MenuOutlined />
+                </Button>
+                <Drawer placement="right" onClose={onClose} open={open}>
+                  <div className="mobilehedermainallmenu">
+                    {/* <div className="">
+                    {DataHeader.map((val, ind) => (
+                      <Appimageheader key={ind} src={val.src} />
+                    ))}
+                    </div> */}
+                    <RouterLink
+                      to="/"
+                      className="mobilehedermenu"
+                      onClick={onClose}
+                    >
+                      Home
+                    </RouterLink>
+                    <label
+                      className="mobilehedermenu"
+                      onClick={() => handleClickScroll("#about")}
+                    >
+                      About
+                    </label>
+                    <RouterLink
+                      to="/photogallery"
+                      className="text-dark mobilehedermenu"
+                      onClick={onClose}
+                    >
+                      Photos
+                    </RouterLink>
+                    <label
+                      className="mobilehedermenu"
+                      onClick={() => handleClickScroll("#Events")}
+                    >
+                      Events
+                    </label>
+                    <label
+                      className="mobilehedermenu"
+                      onClick={() => handleClickScroll("#contact")}
+                    >
+                      Contact
+                    </label>
+                  </div>
+                </Drawer>
+              </div>
+            </Container>
+          </Grid>
+        </Grid>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

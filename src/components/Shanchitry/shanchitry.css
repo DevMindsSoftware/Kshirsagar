@@ -1,0 +1,131 @@
+.imgesmall{
+    /* height: 50%; */
+}
+.img1{
+ position: relative;
+}
+.imgPosition{
+    position: absolute;
+    bottom: 23px;
+    z-index: 1;
+    left: 13px;
+}
+/* .meaniconhoveropineter{
+    
+} */
+.buttsizlingh{
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.content-overlay-shanchitre {
+    background: rgba(255, 255, 255, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(9 6 6 / 17%) 40%, rgb(13 8 8 / 77%) 75%, rgb(21 9 9) 100%) repeat scroll 0 0;
+    position: relative;
+    margin-top: -218px;
+    height: 218px;
+}
+
+.shanchitryhovr:hover{
+    cursor: pointer;
+    
+    /* transform: scale(1, 1);
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1); */
+  }
+.meaniconhoveropineter:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: transform cubic-bezier(0,0,.2,1) .8s;
+    /* transform: scale(1, 1);
+    transition: transform 3s ease-in-out;
+    transform: scale(2.05, 2.05); */
+}
+/* .img2position{
+    position: absolute;
+    top: 475px;
+    left: 13px;
+}
+.img3position{
+    position: absolute;
+    top: 431px;
+    left: 13px;
+}
+.img4position{
+    position: absolute;
+    top: 200px;
+    left: 13px;
+}
+.img5position{
+    position: absolute;
+    top: 155px;
+    left: 13px;
+}
+.img6position{
+    position: absolute;
+    top: 475px;
+    left: 13px;
+} */
+/* .img1position {
+    position: absolute;
+    top: 92px;
+    left: 13px;
+} */
+
+/* < 576 px */
+@media only screen and (max-width: 576px) {
+   
+  }
+  
+  /* > 576 px */
+  @media only screen and (min-width: 576px) {
+   
+  }
+  /* > 768 px */
+  @media only screen and (min-width: 768px) {
+    
+  }
+  /* < 992 px */
+  @media only screen and (max-width: 900px) {
+    /* .img4position {
+        position: absolute;
+        top: 71px !important;
+        left: 13px;
+    }
+    .img5position {
+        position: absolute;
+        top: 49px  !important;
+        left: 13px;
+    }
+    .img1position {
+        position: absolute;
+        top: 52px !important;
+        left: 13px;
+    } */
+  }
+  /* > 1200 px */
+  @media only screen and (min-width: 1200px) {
+    
+  }
+  /* < 1200 px */
+  @media only screen and (max-width: 1200px) {
+    /* .img1position {
+        position: absolute;
+        top: 92px;
+        left: 13px;
+    }
+    .img4position {
+        position: absolute;
+        top: 123px;
+        left: 13px;
+    }
+    .img5position {
+        position: absolute;
+        top: 92px;
+        left: 13px;
+    } */
+  }
+  /* > 1400 px */
+  @media only screen and (min-width: 1400px) {
+   
+  }

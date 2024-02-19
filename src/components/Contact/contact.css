@@ -1,0 +1,138 @@
+.frombutton{
+    background: chocolate; color: white;margin-bottom: 7px; float: left;
+}
+.inputbackcolor{
+    background-color: #f4f5f5;
+}
+.maincontactdiv{
+    padding-top: 100px;
+     /* background-color: rgb(254 207 181); */
+     /* background-color: rgb(255 102 0); */
+     background-color: rgb(211 211 211 / 22%);;
+     padding-bottom: 100px;
+     /* padding-bottom: 170px; */
+}
+
+.contactimage{
+    width: 100%;
+    /* position: relative; */
+    /* position: fixed; */
+    /* top: 229px; */
+}
+.satyajeetimg{
+    position: relative;
+    bottom: -281px;
+}
+.photoupload{
+    border: 1px solid;
+    cursor: pointer;
+    padding: 4px;
+    width: 167px;
+    border-radius: 23px;
+    margin-bottom: -6px;
+    margin-right: 10px;
+}
+.ant-upload{
+    border: none !important;
+    background-color: white !important;
+    display: contents !important;
+    /* display: flex !important; */
+}
+/* .backimg{
+    margin-top: -65px;
+    margin-bottom: -45px;
+} */
+
+.full-background-card {
+    border: 1px solid transparent;
+    background-color: transparent;  
+    background-image: url("../../images/contact card.png");
+    background-size: 100% 100%;
+    background-position: center;
+  }
+.antitlteinpufont{
+    font-weight: 700;
+}
+.ant-form-item .antitlteinpufont{
+    margin-bottom: 0px !important;
+}
+.mainfrom{
+    padding: 51px;
+    padding-bottom: 41px;
+    margin-top: 8px;
+}
+
+/* > 576 px */
+@media only screen and (max-width: 576px){
+   
+    
+}
+
+/* > 576 px */
+@media only screen and (max-width: 691px){
+   
+   
+}
+/* < 768 px */
+@media only screen and (max-width: 768px){
+    
+   
+}
+/* < 768 px */
+@media only screen and (max-width: 768px){
+    .contactimage {
+        /* width: 100%;
+        position: relative;
+        top: 0px;
+        left: -23px; */
+    }
+    
+}
+
+/* > 992 px */
+@media only screen and (max-width: 992px){
+    .satyajeetimg {
+        position: relative;
+        left: -18px;
+        bottom: -8px;
+    }
+}
+
+/* > 1024 px */
+@media only screen and (min-width: 1024px){
+   
+    .contactimage {
+        /* width: 100%;
+        position: relative;
+        top:  281px;
+        left: -73px; */
+        /* width: 100%;
+    position: relative;
+    top: 327px;
+    left: -73px; */
+    }
+    .satyajeetimg{
+        position: relative;
+        bottom: -354px;
+    }
+      
+}
+/* > 1400 px */
+@media only screen and (min-width: 1400px){
+   
+    .contactimage{
+        width: 100%;
+        position: relative;
+        /* bottom: -21px; */
+        bottom: -25px;
+        left: -50px;
+}
+.satyajeetimg{
+    /* position: relative;
+    bottom: -283px; */
+    position: relative;
+    margin-bottom: 100px;
+    bottom: -263px;
+}
+      
+}

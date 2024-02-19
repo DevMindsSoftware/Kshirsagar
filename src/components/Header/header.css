@@ -1,0 +1,226 @@
+.devminds-maindivheader{
+    height: var(--headermainheight);
+    background-color: var(--mainheaderbackgroundcolor);
+}
+.devminds-drawerbuttonmobile{
+     margin-top: var(--drawerbuttonmobile)!important;
+     font-size: var(--drawerbuttonmobileFontsize)!important; 
+}
+.devminds-desktopview{
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.devminds-mobilehedermainallmenu{
+    display: inline-grid;
+}
+.mobilehedermenu{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-header-devmainds::before {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    bottom: 0;
+    right: 60px;
+    background: var(--thm-base);
+    content: "";
+}
+
+.devminds-iconsize{
+    font-size: 30px;
+}
+
+.devminds-earphonesizeset{
+    position: relative;
+    left: -54px;
+    bottom: -49px;
+    margin-top: -20px;
+    color: var(--allthimcolor)
+}
+.devminds-numberstyle{
+    color: #121110;
+    text-decoration: none;
+}
+  .devminds-animated-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #dbdcdd;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+  .devminds-animated-button {
+    display: inline-block;
+    color: #6E6E6E;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+}
+  
+  .devminds-animated-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .devminds-animated-button.hovered {
+    background-color: #dbdcdd;
+    color: #fff; 
+  }
+
+  .devmaindslogo_content::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: -7px;
+    background: rgba(var(--thm-header-rgb), .15);
+    clip-path: polygon(101% 0, 86% 56%, 90% 100%, 0 100%, 0 1%);
+    content: "";
+    z-index: -2;
+}
+.calllaanytime-text{
+    height: 5px;
+    width: 100px;
+}
+.numbercall{
+    margin-top:18px
+}
+/* .devminds-maindrawer {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.devminds-drawer-open {
+  opacity: 1;
+} */
+ /* < 320 px */
+@media only screen and (max-width: 320px){
+    .devminds-mobileVisible{
+        display: block;
+    }
+    .devminds-desktopview{
+        display: none;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: block;
+    }
+    .deskstopviewimages{
+        display: none;
+    }
+   
+ }
+
+/* < 428 px */
+@media only screen and (max-width: 428px){
+    .devminds-mobileVisible{
+        display: block;
+    }
+    .devminds-desktopview{
+        display: none;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: block;
+    }
+    .deskstopviewimages{
+        display: none;
+    }
+    .Devmindslogo {
+        height: 49px;
+    }
+}
+
+/* < 576 px */
+@media only screen and (max-width: 760px){
+    .devminds-mobileVisible{
+        display: block;
+    }
+    .devminds-desktopview{
+        display: none;
+    }
+   .devminds-maindrawer{
+        width: 300px !important;
+        margin-left: 96px;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: block;
+    }
+    .deskstopviewimages{
+        display: none;
+    }
+    .desktopheadercontact{
+        display: none;
+    }
+}
+/* > 576 px */
+@media only screen and (min-width: 660px){
+    .devminds-mobileVisible{
+        display: block;
+    }
+    .devminds-desktopview{
+        display: none; 
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: none;
+    }
+   
+}
+
+/* > 768 px */
+@media only screen and (min-width: 768px){
+    .devminds-mobileVisible{
+        display: none;
+    }
+    .devminds-desktopview{
+        display: block;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: none;
+    }
+ 
+}
+/* > 992 px */
+@media only screen and (min-width: 992px){
+    .devminds-mobileVisible{
+        display: none;
+    }
+    .devminds-desktopview{
+        display: block;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: none;
+    }
+}
+/* > 1200 px */
+@media only screen and (min-width: 1200px){
+    .devminds-mobileVisible{
+        display: none;
+    }
+    .devminds-desktopview{
+        display: block;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: none;
+    }
+    
+}
+/* > 1400 px */
+@media only screen and (min-width: 1400px){
+    
+    .devminds-mobileVisible{
+        display: none;
+    }
+    .devminds-desktopview{
+        display: block;
+    }
+    .devminds-mobilvieimagesdrawer{
+        display: none;
+    }
+}

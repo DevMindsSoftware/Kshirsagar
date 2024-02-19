@@ -1,0 +1,137 @@
+
+
+.text-carausal{
+    position: absolute;
+      top: 41%;
+      left: 65%;
+      font-size: 20px;
+      line-height: 21px;
+      transform: translate(-50%, -50%);
+      color: white;
+      cursor: pointer;
+  }
+  .linedott{
+    width: 9px !important;
+    height: 9px !important;
+    border-radius: 50% !important;
+  }
+  .butthover:hover{
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+  .iconsslider{
+    position: absolute;
+    top: 18%;
+    cursor: pointer;
+    right: 28px;
+    display: grid;
+  }
+  .iconsslider img{
+  margin-bottom: 5px;  
+  transition: transform cubic-bezier(0,0,.2,1) .8s;
+  }
+  .facbookicon:hover{
+    background-color: #1877f2;
+    border-radius: 50%;
+    transform: rotate(360deg);
+    /* transition: transform cubic-bezier(0,0,.2,1) .5s; */
+  }
+  .twttericon:hover{
+    background-color: #1d9bf0;
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  .instaicon:hover{
+    background-color: #e64268;
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  .youticon:hover{
+    background-color: #f70f47;;
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  .linkicon:hover{
+    background-color: #1a0dab;
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+
+  /* < 576 px */
+  @media only screen and (max-width: 576px) {
+    .carausal-dev {
+      height: 357px;
+    }
+    .text-carausal {
+      margin: -190px;
+      margin-left: -14px;
+      margin-top: 39px;
+    }
+    .iconsslider{
+      display: none !important;
+    }
+  }
+  
+  /* > 576 px */
+  @media only screen and (min-width: 576px) {
+    .carausal-dev {
+    height: 380px 
+    }
+  }
+  /* > 768 px */
+  @media only screen and (min-width: 768px) {
+    .carausal-dev {
+      height: 345px 
+    }
+    
+  }
+  /* > 768 px */
+  @media only screen and (min-width: 916px) {
+    
+    .styajeettambetitle{
+      font-size: 60px;
+      text-shadow: -3px -1px 6px black;
+    }
+    
+  }
+  /* > 836 px */
+  @media only screen and (min-width: 836px) {
+    
+    .text-carausal {
+      position: absolute;
+      top: 47%;
+      left: 65%;
+      font-size: 20px;
+      line-height: 21px;
+      transform: translate(-50%, -50%);
+      color: white;
+      cursor: pointer;
+  }
+
+  }
+  /* > 992 px */
+  @media only screen and (min-width: 992px) {
+    .carausal-dev {
+      height: 370px ;
+    }
+  }
+  /* > 1200 px */
+  @media only screen and (min-width: 1200px) {
+    .carausal-dev {
+      height: 400px ;
+      /* height: 700px ;  */
+    }
+  }
+  /* > 1400 px */
+  @media only screen and (min-width: 1400px) {
+    .carausal-dev {
+      /* height: 500px ; */
+      /* height: 446px !important;  */
+      height: 89vh !important; 
+    }
+  }
+.headerdistans{
+  margin-top: 112px;
+}

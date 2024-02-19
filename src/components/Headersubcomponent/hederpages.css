@@ -1,0 +1,47 @@
+
+
+.headerimagessize{
+    height: var(--heightlogo);
+    width: var(--headerlogowidth);
+    margin-top: 5px;
+}
+.ambedkarsize{
+    margin-top: 5px;
+}
+.Devmindslogo{
+    color: var( --text-white);
+    /* height: 61px; */
+    height: 74px;
+}
+.main-header-devmainds::before {
+    position: absolute;
+    top: 0;
+    left: -999999px;
+    bottom: 0;
+    right: 60px;
+    background: #ee3434;
+    content: "";
+}
+.devmaindslogo_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    padding-right: 120px;
+    z-index: 1;
+}
+.devmaindslogo_content::before {
+    position: absolute;
+    top: -1px;
+    left: -382px;
+    bottom: 0;
+    right: 0px;
+    background: var(--allthimcolor);
+    clip-path: polygon(100% 0, 93% 55%, 95% 100%, 0 100%, 0 1%);
+    content: "";
+    z-index: -1;
+}
+.devmindslogo {
+    margin-top: 0px !important;
+}
+
