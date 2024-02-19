@@ -18,6 +18,10 @@
 .hovrtext{
     cursor: pointer;
 }
+.footertext{
+    /* font-size: 10px; */
+    font-weight: 500;
+}
 
 .iconsfooter:hover{
     cursor: pointer;

@@ -9,7 +9,6 @@ import Shanchitry from "../Shanchitry/index";
 import Contact from "../Contact/index";
 import Footer from "../Footer/index";
 import "./home.css"
-import VisitorCounter from '../VisitorCounter';
 
 const Home = () => {
   return ( 
@@ -24,7 +23,6 @@ const Home = () => {
         <Smallheader />
         </div> */}
       <Slider />
-      <VisitorCounter />
       </div>
       <Thodkayatparichy />
       <Batmyaanilekhan />
