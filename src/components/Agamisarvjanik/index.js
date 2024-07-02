@@ -11,6 +11,8 @@ import {
 } from "../Helper/karyakram";
 // import InfiniteScroll from "react-infinite-scroll-component";
 import { Avatar, Divider, List, Skeleton } from "antd";
+import programdata from "../ServerData/programdata";
+import carouselprogramdata from "../ServerData/Carouselprogramdata";
 
 const Agamisarvjanik = () => {
   const [loading, setloading] = useState(false);
@@ -110,14 +112,14 @@ const Agamisarvjanik = () => {
             <div className="col-lg-5 col-xl-5 col-md-12 col-sm-12 col-12">
               <div className="mainsatejetimag">
                 <Carousel autoplay>
-                  {datakarykrmphoto.length > 0 ? (
-                    datakarykrmphoto.map((e, index) => {
+                  {carouselprogramdata.length > 0 ? (
+                    carouselprogramdata.map((e, index) => {
                       return (
-                        <div style={contentStyle}>
+                        <div key={e.key} style={contentStyle}>
                           <div className="mb-3">
                             <img
                               // src={image4}
-                              src={imgURL + e.imagetokary}
+                              src={e.src}
                               alt=""
                               className="agamisimage"
                             />
@@ -126,7 +128,7 @@ const Agamisarvjanik = () => {
                           <div className="textimgdatabase text-white">
                             <p> {e.karyakramTitle1}</p>
 
-                            <h5> {e.karyakramText1}</h5>
+                            <h5> {e.paragraphtext}</h5>
                           </div>
                         </div>
                       );
@@ -281,7 +283,7 @@ const Agamisarvjanik = () => {
               <div className="mt-2 ">
                 <div className="">
                   {" "}
-                  <span className="maintext">आगामी कार्यक्रम</span>{" "}
+                  <span className="maintext">कार्यक्रम</span>{" "}
                 </div>
                 <div className="bg-white p-4 ">
                   <marquee
@@ -293,15 +295,15 @@ const Agamisarvjanik = () => {
                     scrollamount="2"
                   >
                     <div className=" row maindivsetposition marquee-container">
-                      {dataAgamikaryakrm.length > 0 ? (
-                        dataAgamikaryakrm.map((e, index) => {
+                      {programdata.length > 0 ? (
+                        programdata.map((e, index) => {
                           return (
                             <>
                               <div className=" col-sm-3 col-md-3 col-lg-3">
                                 <div>
                                   <img
                                     // src={image1}
-                                    src={URLidimage + e.karyakramImage}
+                                    src={e.programiamge}
                                     className="pt-4"
                                     alt=""
                                     style={{ height: "130px", width: "100%" }}

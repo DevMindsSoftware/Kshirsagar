@@ -41,13 +41,22 @@ const Smallheader = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const items = [
     {
       key: "1",
       label: (
         // <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com" className='text-dark'>
         <Link to="/Photogallary">
-          <b className="text-warning">फोटो गॅलरी </b>
+          <label onClick={scrollToTop}>
+            <b className="text-warning">फोटो गॅलरी </b>
+          </label>
         </Link>
         // </a>
       ),
@@ -57,7 +66,9 @@ const Smallheader = () => {
       label: (
         // <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com" className='text-dark'>
         <Link to="/video">
-          <b className="text-dark"> व्हिडिओ गॅलरी</b>
+          <label onClick={scrollToTop}>
+            <b className="text-dark"> व्हिडिओ गॅलरी</b>
+          </label>
         </Link>
         // </a>
       ),
@@ -83,25 +94,23 @@ const Smallheader = () => {
  <label className="menu-text">
  <b>मुखपृष्ठ</b>
 </label>
-</Link> */}
-              <label
-                className="menu-text"
-                onClick={() => handleClickScroll("#main")}
-              >
-                <Link to="/">
+</Link> */}{" "}
+              <Link to="/">
+                <label
+                  className="menu-text"
+                  onClick={scrollToTop}
+                  // onClick={() => handleClickScroll("#main")}
+                >
                   <b>मुखपृष्ठ</b>
-                </Link>
-              </label>
+                </label>
+              </Link>
               <label
                 className="menu-text"
                 onClick={() => handleClickScroll("परिचय")}
               >
                 <b>परिचय</b>
               </label>
-              <label
-                className="menu-text "
-                onClick={() => handleClickScroll("मिडिया")}
-              >
+              <label className="menu-text " onClick={scrollToTop}>
                 {/* <b>मिडियारिसोर्सेस</b> */}
                 <Dropdown
                   className="buttsiz"
@@ -113,8 +122,8 @@ const Smallheader = () => {
                 >
                   <Button>
                     {" "}
-                    <Link to="/">
-                      <b>मिडियारिसोर्सेस</b>
+                    <Link to="/Photogallary">
+                      <b>गैलरी</b>
                     </Link>
                   </Button>
                 </Dropdown>
@@ -125,43 +134,35 @@ const Smallheader = () => {
               >
                 <b>दौरा</b>
               </label>
-
+              {/* <Link to="/Photogallary"> */}
               <label
                 className="menu-text"
-                onClick={() => handleClickScroll("गैलरी")}
+                onClick={() => handleClickScroll("मिडिया")}
               >
-                <Link to="/Photogallary">
-                  <b>गैलरी</b>
-                </Link>
+                <b> मिडियारिसोर्सेस</b>
               </label>
-              <label
-                className="menu-text"
-                onClick={() => handleClickScroll("कार्यक्रम")}
-              >
-                 <Link to="/Karykram">
-                <b>कार्यक्रम</b>
-                </Link>
-              </label>
-              <label
-                className="menu-text"
-                onClick={() => handleClickScroll("संपर्क")}
-              >
-                <b>सभासदनोंदणी </b>
-              </label>
-              <label
-                className="menu-text"
-                onClick={() => handleClickScroll("संपर्क")}
-              >
-                <Link to="/Sampark">
+              {/* </Link> */}
+              <Link to="/Karykram">
+                <label className="menu-text" onClick={scrollToTop}>
+                  <b>कार्यक्रम</b>
+                </label>
+              </Link>
+              <Link to="/Sampark">
+                <label className="menu-text" onClick={scrollToTop}>
+                  <b>सभासदनोंदणी </b>
+                </label>
+              </Link>
+              <Link to="/Sampark">
+                <label className="menu-text" onClick={scrollToTop}>
                   <b>संपर्क</b>
-                </Link>
-              </label>
-              <label
+                </label>
+              </Link>
+              {/* <label
                 className="menu-text"
                 onClick={() => handleClickScroll("संपर्क")}
               >
                 <b>भाषा</b>
-              </label>
+              </label> */}
             </div>
           </div>
         </div>

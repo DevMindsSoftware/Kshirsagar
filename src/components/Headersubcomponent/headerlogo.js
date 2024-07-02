@@ -1,5 +1,6 @@
 import React from "react";
-import logomain from "../../images/mainlogo.png"
+import { Link } from "react-router-dom";
+import logomain from "../../images/mainlogo.png";
 
 const Appheaderlogo = () => {
   return (
@@ -7,7 +8,9 @@ const Appheaderlogo = () => {
       <div className="devmaindslogo_content">
         <h4>
           {/* <b className="Devmindslogo">Kshirsagar</b>  */}
-          <img src={logomain} alt="maindevminds" className="Devmindslogo" />
+          <Link to="/">
+            <img src={logomain} alt="maindevminds" className="Devmindslogo" />
+          </Link>
         </h4>
       </div>
     </div>

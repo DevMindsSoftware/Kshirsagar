@@ -12,6 +12,8 @@ import {
   BannerdetailTitleGetByApi,
   bannerslidershowByApi,
 } from "../Helper/bannerslider";
+import SliderData from "../ServerData/sliderData";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const [loading, setloading] = useState(false);
@@ -35,7 +37,7 @@ const Slider = () => {
     );
   };
   return (
-    <div className="container-fuild " id="main">
+    <div className="container-fuild " id="#main">
       <div
         id="carouselExampleControls"
         className="carousel slide "
@@ -68,21 +70,21 @@ const Slider = () => {
             type="button"
             data-bs-target="#carouselExampleControls"
             data-bs-slide-to="3"
-            aria-label="Slide 3"
+            aria-label="Slide 4"
             className="linedott"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleControls"
             data-bs-slide-to="4"
-            aria-label="Slide 3"
+            aria-label="Slide 5"
             className="linedott"
           ></button>
         </div>
 
         <div className="carousel-inner">
-          {dataapiside.length > 0 ? (
-            dataapiside.map((e, index) => {
+          {SliderData.length > 0 ? (
+            SliderData.map((e, index) => {
               return (
                 <div
                   className={
@@ -91,7 +93,7 @@ const Slider = () => {
                 >
                   <img
                     // src={images}
-                    src={imgURL + e.imageupload}
+                    src={e.src}
                     className="d-block w-100 carausal-dev"
                     alt="..."
                   />
@@ -103,38 +105,36 @@ const Slider = () => {
                       style={{
                         marginRight: "10px",
                         marginTop: "30px ",
+                        textShadow: "rgb(219 216 216 / 79%) -1px -1px",
                         padding: "2px",
                       }}
                     >
                       {e.BannerLable}
-                      {/* "महाराष्ट्र ला महान राष्ट्र म्‍हणून बगू शकनारा एक युवक..." */}
                     </h4>
                     <br />
                     <h1 className="animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s">
-                      <b className="styajeettambetitle">
-                        {/*राजेश क्षीरसागर */}
-                        {e.bannerHeading}
-                      </b>
+                      <b className="styajeettambetitle">{e.bannerHeading}</b>
                     </h1>
                     {/* <br /> */}
                     <p className="animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s">
-                      {/* महाराष्ट्र विधान परिषद सदस्य */}
                       {e.bannerInfo}
                     </p>
-                    <button
-                      type="button"
-                      className="btn mt-4 rounded-pill text-white butthover animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s"
-                      style={{ background: "rgb(255, 130, 63)" }}
-                    >
-                      <b style={{ color: "rgb(109, 62, 54)" }}> सभासद बना</b>
-                    </button>
+                    <Link to="/Sampark">
+                      <button
+                        type="button"
+                        className="btn mt-4 rounded-pill text-white butthover animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s"
+                        style={{ background: "rgb(255, 130, 63)" }}
+                      >
+                        <b style={{ color: "rgb(109, 62, 54)" }}> सभासद बना</b>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               );
             })
           ) : (
             <>
-              <div className="carousel-item active">
+              {/* <div className="carousel-item active">
                 <img
                   src={balasahebh}
                   className="d-block w-100 carausal-dev"
@@ -149,25 +149,18 @@ const Slider = () => {
                       marginRight: "10px",
                       marginTop: "30px ",
                       padding: "2px",
-                      // textShadow: "-2px 0px 1px #000000bd",
                       textShadow: "rgb(219 216 216 / 79%) -1px -1px",
                       fontSize: "34px",
                     }}
                   >
-                    {/* {lable} */}
                     शिवसेना प्रमुख
                   </h4>
                   <br />
                   <h1 className="animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s">
-                    <b className="styajeettambetitle">
-                     बाळासाहेब ठाकरे
-                      {/* {heading} */}
-                    </b>
+                    <b className="styajeettambetitle">बाळासाहेब ठाकरे</b>
                   </h1>
-                  {/* <br /> */}
-                  <p className="animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s">
-                    {/*बाळासाहेब ठाकरे */}
-                  </p>
+
+                  <p className="animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s"></p>
                   <button
                     type="button"
                     className="btn mt-4 rounded-pill text-white butthover animate__animated animate__fadeInUp animate-duration', '800ms' animate-delay: 1s animate__slower	5s"
@@ -176,9 +169,9 @@ const Slider = () => {
                     <b style={{ color: "rgb(109, 62, 54)" }}> सभासद बना</b>
                   </button>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="carousel-item">
+              {/* <div className="carousel-item">
                 <img
                   src={images}
                   className="d-blinkiconlock w-100 carausal-dev"
@@ -214,8 +207,9 @@ const Slider = () => {
                     <b style={{ color: "rgb(109, 62, 54)" }}> सभासद बना</b>
                   </button>
                 </div>
-              </div>
-              <div className="carousel-item">
+              </div> */}
+
+              {/* <div className="carousel-item">
                 <img
                   src={images}
                   className="d-block w-100 carausal-dev"
@@ -251,7 +245,7 @@ const Slider = () => {
                     <b style={{ color: "rgb(109, 62, 54)" }}> सभासद बना</b>
                   </button>
                 </div>
-              </div>
+              </div> */}
             </>
           )}
         </div>

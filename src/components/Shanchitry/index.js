@@ -13,6 +13,7 @@ import "animate.css";
 import "./shanchitry.css";
 import { Slide } from "react-awesome-reveal";
 import { ShanchitryTitleGetByApi } from "../Helper/shanchitr";
+import Snapshotsdata from "../ServerData/snapshotsdata";
 
 const Shanchitry = () => {
   const [loading, setloading] = useState(false);
@@ -73,13 +74,13 @@ const Shanchitry = () => {
           {/* <div className="container pt-4"> */}
 
           <div className="row  pt-4">
-            {datashanchitry.length > 0 ? (
-              datashanchitry.map((e, index) => {
+            {Snapshotsdata.length > 0 ? (
+              Snapshotsdata.map((e, index) => {
                 return (
                   <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div className="img1 mt-1">
                       <img
-                        src={imgURL2 + e.shanchitryimage}
+                        src={e.src}
                         //  src={image1}
                         alt="a"
                         className="w-100  mb-2 "

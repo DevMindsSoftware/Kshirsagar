@@ -7,6 +7,7 @@ import Smallheader from "../Smallheader";
 import "./karykram.css"
 
 const Karykram = () => {
+
   return (
     <div>
       {/* <Header />

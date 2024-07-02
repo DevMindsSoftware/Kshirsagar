@@ -90,6 +90,9 @@
     height: 5px;
     width: 100px;
 }
+.devminds-maindrawer   {
+    background-color: var(--allthimcolor) !important;
+}
 .numbercall{
     margin-top:18px
 }
@@ -97,6 +100,7 @@
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
 }
+
 
 .devminds-drawer-open {
   opacity: 1;
@@ -133,7 +137,9 @@
         display: none;
     }
     .Devmindslogo {
-        height: 49px;
+        /* height: 49px; */
+        height: 62px;
+        width: 168px;
     }
 }
 
@@ -145,10 +151,10 @@
     .devminds-desktopview{
         display: none;
     }
-   .devminds-maindrawer{
+   /* .devminds-maindrawer{
         width: 300px !important;
         margin-left: 96px;
-    }
+    } */
     .devminds-mobilvieimagesdrawer{
         display: block;
     }

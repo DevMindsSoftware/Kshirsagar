@@ -5,22 +5,10 @@ import Footer from "../Footer/index";
 import { Col, Row, Menu, Input, Button } from "antd";
 import "./photo.css";
 import { DatePicker, Space } from "antd";
-// import image1 from "../../image/mqdefault1.jpg";
-// import image2 from "../../image/mqdefault22.jpg";
-// import image3 from "../../image/mqdefault33.jpg";
-// import image4 from "../../image/mqdefault444.jpg";
 import kshirsagarimage1 from "../../images/gallaryhome-image.jpg";
 import kshirsagarimage2 from "../../images/kamegalleary-image.jpg";
 import kshirsagarimage3 from "../../images/wokingkshirsagar-gallery.jpg";
 import kshirsagarimage4 from "../../images/yatrameeting-gallery.jpg";
-// import kshirsagarimage5 from "../../image/dasramelavagalleary-image.jpg";
-// import fb1 from "../../image/facebook icon filled.png";
-// import tw2 from "../../image/twitter icon filled.png";
-// import she3 from "../../image/share icon filled.png";
-// import modiim1 from "../../image/modi1.jpg";
-// import modiim2 from "../../image/modi 2.jpg";
-// import modiim3 from "../../image/modi3.jpg";
-// import modiim4 from "../../image/modi4.jpg";
 import { Image } from "antd";
 import { Avatar, Card } from "antd";
 import logo1 from "../../images/facebook icon filled.png";
@@ -28,12 +16,16 @@ import logo2 from "../../images/twitter icon filled.png";
 import logo3 from "../../images/share icon filled.png";
 import { photoGallaryesTitleGetByApi } from "../Helper/photogallary";
 import { Link } from "react-router-dom";
+import photosdata from "../ServerData/photosdata";
 const { Meta } = Card;
 const { RangePicker } = DatePicker;
 
 const Photogallary = () => {
   const [loading, setloading] = useState(false);
   const [datakaryphotogallary, setDatakaryphotogallary] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredData, setFilteredData] = useState(photosdata);
+
   const URLidimage =
     "http://localhost:3000/api/fileuploads/karyakramimageFolder/download/";
   useEffect(() => {
@@ -53,6 +45,18 @@ const Photogallary = () => {
       }
     );
   };
+
+ const handleSearch = () => {
+  const result = photosdata.filter((item) =>
+    item.textlabel.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  setFilteredData(result);
+};
+
+const onchangesetfun = (e) => {
+  setSearchQuery(e.target.value);
+  setFilteredData(photosdata);
+}
   return (
     <>
       {/* <div className="headerposition">
@@ -93,7 +97,7 @@ const Photogallary = () => {
                   xl={{ span: 8 }}
                   xxl={{ span: 11 }}
                 >
-                  <Input placeholder="search Photo" className="searchinput " />
+                  <Input placeholder="search Photo" className="searchinput "  onChange={onchangesetfun} />
                 </Col>
                 <Col
                   xs={{ span: 24 }}
@@ -117,7 +121,7 @@ const Photogallary = () => {
                   xl={{ span: 6 }}
                   xxl={{ span: 2 }}
                 >
-                  <Button type="primary" className="buttvideo" danger size={3}>
+                  <Button type="primary" className="buttvideo" onClick={handleSearch} danger size={3}>
                     <span className="buttext">Search</span>
                   </Button>
                 </Col>
@@ -222,8 +226,8 @@ const Photogallary = () => {
           {/* cards========================================= */}
           <div className="pt-5 animate__animated animate__fadeInUp animate__delay-0s">
             <Row>
-              {datakaryphotogallary.length > 0 ? (
-                datakaryphotogallary.map((e, index) => {
+              {photosdata.length > 0 ? (
+                filteredData.map((e, index) => {
                   return (
                     <>
                       <Col
@@ -237,7 +241,7 @@ const Photogallary = () => {
                         <div className="imagegallarysize">
                           <div className="cardmainimagsizese ">
                             <Image
-                              src={URLidimage + e.photogallaryImage}
+                              src={e.src}
                               style={{ height: "200px", width: "100%" }}
                             />
                             <div className="imgPosition">
@@ -245,7 +249,7 @@ const Photogallary = () => {
                                 class="text-white fw-bolder  mb-2"
                                 style={{ padding: "10px" }}
                               >
-                                {e.galllarytext}
+                                {e.textlabel}
                               </p>
                               <div class="d-flex px-2">
                                 <img
@@ -455,7 +459,7 @@ const Photogallary = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

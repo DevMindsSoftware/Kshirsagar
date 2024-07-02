@@ -64,7 +64,7 @@ function App() {
       </div>
       <div
         onClick={() => {
-          handleClickScroll("main");
+          handleClickScroll("#main");
         }}
         // className="devminds-uperarrowscroll"
       >

@@ -76,9 +76,9 @@
 }
 
 @media only screen and (max-width: 1005px) {
-    .videoheader {
+    /* .videoheader {
         margin-top: 92px;
-    }
+    } */
     }
 @media only screen and (min-width: 768px) {
     .cardmainimagsizese:hover{

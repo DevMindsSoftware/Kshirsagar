@@ -1,10 +1,10 @@
-import React, {useRef, useEffect, useState} from "react";
+import React, { useRef, useEffect, useState } from "react";
 import image from "../../images/kshirsagar-parichy.png";
 import roundcircal from "../../images/round-circal.png";
-import 'animate.css';
+import "animate.css";
 import "./thodkaytprichy.css";
 import { Slide } from "react-awesome-reveal";
-
+import introductionData from "../ServerData/introduction";
 
 const Thodkayatparichy = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -21,7 +21,10 @@ const Thodkayatparichy = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !animationTriggered) {
           // Add the desired animation class when the component is in view
-          animatedRef.current.classList.add("animate__animated", "animate__fadeInUp");
+          animatedRef.current.classList.add(
+            "animate__animated",
+            "animate__fadeInUp"
+          );
           setAnimationTriggered(true);
           observer.unobserve(entry.target);
         }
@@ -40,30 +43,31 @@ const Thodkayatparichy = () => {
     };
   }, [animationTriggered]);
   return (
-    <div id="परिचय" className="pt-4 backimagepublic"
-    //  style={{backgroundColor: "rgb(255 130 63)" }}
-     >
+    <div
+      id="परिचय"
+      className="pt-4 backimagepublic"
+      //  style={{backgroundColor: "rgb(255 130 63)" }}
+    >
       <div className="container  ">
         <div className=" box-we">
           <div className=" ">
             <div className="row ">
               <div className="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12">
-                <div className="alimenttext"  ref={animatedRef}>
+                <div className="alimenttext" ref={animatedRef}>
                   <h4
                     style={{
                       fontSize: "30px",
                       paddingLeft: "35PX",
-                      color:"#fd7601",
-                      textShadow: "1px 2px #200000"
+                      color: "#fd7601",
+                      textShadow: "1px 2px #200000",
                       // fontWeight: "1700px",
                       // marginTop: "40px",
                     }}
                   >
                     <b>थोडक्यात परिचय</b>
-                    
                   </h4>
                   <Slide cascade damping={0.1} direction="up" triggerOnce>
-                  <p className="text-p text-white textparichy animate__animated animate__fadeInUp">
+                    {/* <p className="text-p text-white textparichy animate__animated animate__fadeInUp">
                   मा.श्री.राजेश क्षीरसागर हे कार्यकारी अध्यक्ष, महाराष्ट्र राज्यनियोजन मंडळ, कॅबिनेट मंत्री दर्जा आहेत. 
                  अगदी तळापासून आपल्या सुरुवात करून ते 36 वर्षापासून आणि निवणुकीच्या राजकारणात सक्रिय आहेत.
 
@@ -73,16 +77,26 @@ const Thodkayatparichy = () => {
                   या पदावर दि.१९ जून २०१९ रोजी पासून कार्यरत आहेत. या पदावर कार्यरत असताना त्यांनी महाराष्ट्राचा दौरा करत
                    विभागीय स्तरावर नियोजन मंडळाच्या बैठका घेतल्या. या माध्यमातून त्यांचा लोकोपयोगी विकासकामे व जिल्हा नियोजन समितीचा 
                    कारभार सुधारण्यावर त्यांचा भर राहिला. त्यांच्या कामाची दखल त्यांच्याकडे या कामासोबत नवी जबाबदारी शासनाने सोपवली आहे.
-                  </p>
+                  </p> */}
+                    {introductionData.map((data) => (
+                      <div key={data.key}>
+                        <p className="text-p text-white textparichy animate__animated animate__fadeInUp">
+                          {data.paragraph1}
+                        </p>
+                        <p className="text-p text-white textparichy animate__animated animate__fadeInUp">
+                          {data.paragraph2}
+                        </p>
+                      </div>
+                    ))}
                   </Slide>
                   <div className="text-start mx-4">
-                  <button
-                    type="button"
-                    className="btn mt-4 text-dark rounded-pill prichhover"
-                    style={{ background: "white", cursor: 'pointer' }}
-                  >
-                    <b style={{color:"rgb(109, 62, 54)"}}>अधिक माहिती</b>
-                  </button>
+                    <button
+                      type="button"
+                      className="btn mt-4 text-dark rounded-pill prichhover"
+                      style={{ background: "white", cursor: "pointer" }}
+                    >
+                      <b style={{ color: "rgb(109, 62, 54)" }}>अधिक माहिती</b>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -91,13 +105,23 @@ const Thodkayatparichy = () => {
                   <img src={roundcircal} alt="kshirsagar" />
                 </div> */}
                 <div className="maincircaldiv">
-                <div className="devminds-imgshape1 ">
-                <img src={roundcircal} alt="#" />
-              </div>
-              <div className="devminds-imgshape2">
-                <img src={roundcircal} alt="#" />
-              </div>
-                  <img src={image} alt="kshirsagar" className="kshirsagar" />
+                  {introductionData.map((data) => (
+                    <div key={data.key}>
+                      <div className="devminds-imgshape1">
+                        <img src={data.roundcircalimage} alt="#" />
+                      </div>
+                      <div className="devminds-imgshape2">
+                        <img src={data.roundcircalimage} alt="#" />
+                      </div>
+                      <div>
+                        <img
+                          src={data.src}
+                          alt="kshirsagar"
+                          className="kshirsagar"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

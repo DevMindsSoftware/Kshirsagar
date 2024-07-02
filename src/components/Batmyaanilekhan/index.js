@@ -7,6 +7,7 @@ import calender from "../../images/calender icon.png";
 import "animate.css";
 import { BatmayadetalTitleGetByApi } from "../Helper/batmaya";
 import { Slide } from "react-awesome-reveal";
+import newsandarticlesdata from "../ServerData/newsandarticlesdata";
 
 const Batmyaanilekhan = () => {
   const [loading, setloading] = useState(false);
@@ -86,15 +87,15 @@ const Batmyaanilekhan = () => {
           <br />
           <div className=" ">
             <div className="row ">
-              {databatmaya.length > 0 ? (
-                databatmaya.map((e, index) => {
+              {newsandarticlesdata.length > 0 ? (
+                newsandarticlesdata.map((e, index) => {
                   return (
                     <div className="col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12">
                       <div className="card cardaa " id="card1">
                         <img
                           className="sizeimg"
                           // src={image1}
-                          src={imgURL + e.imagebatmaya}
+                          src={e.src}
                           alt="Card image"
                         />
                         <div className="card-body text-center text-decoration-none">
@@ -102,9 +103,9 @@ const Batmyaanilekhan = () => {
                             <p className="card-text  textsize">
                               {/* गोड बोलू नका, कामे निकाली काढा <br />: सत्यजीत
                               तांबे */}
-                              {e.batmyalable}
+                              {e.textparagraph}
                             </p>
-                            <br />
+                            {/* <br /> */}
                           </a>
                           <i className="fa-solid fa-calendar-days fa-lg listtext"></i>
                           <span>
@@ -115,7 +116,7 @@ const Batmyaanilekhan = () => {
                               width="25px"
                             />{" "}
                             {/* &nbsp; 13/06/2023 - लोकमत */}
-                            {e.batmyadate} - {e.papername}
+                            {e.date} - {e.newspapername}
                             {/* <span style={{marginLeft: '60px'}}>लोकमत</span> */}
                           </span>
                           <br />

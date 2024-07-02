@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Functiontext from "../../Common/Functiontext";
 import { Button, Dropdown, Menu } from "antd";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,14 @@ const Header = () => {
 
   const onClose = () => {
     setOpen(false);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    onClose();
   };
 
   const handleClickScroll = (id) => {
@@ -112,30 +121,44 @@ const Header = () => {
                   // }`}
                 >
                   <div className="devminds-mobilehedermainallmenu">
-                    <label
-                      className="mobilehedermenu"
-                      onClick={() => handleClickScroll("sliderid")}
-                    >
-                      Home
-                    </label>
+                    <Link to="/">
+                      <label
+                        className="mobilehedermenu"
+                        onClick={scrollToTop}
+                      >
+                        <b>मुखपृष्ठ</b>
+                      </label>
+                    </Link>
                     {/* <label
                       className="mobilehedermenu"
                       onClick={() => handleClickScroll("cardhoveslider")}
                     >
                       cards
                     </label> */}
-                    <label
-                      className="mobilehedermenu"
-                      onClick={() => handleClickScroll("about")}
-                    >
-                      About
-                    </label>
-                    <label
-                      className="mobilehedermenu"
-                      onClick={() => handleClickScroll("activity")}
-                    >
-                      activity
-                    </label>
+                    <Link to="/Photogallary">
+                      <label
+                        className="mobilehedermenu"
+                        onClick={scrollToTop}
+                      >
+                        <b>फोटो गॅलरी</b>
+                      </label>
+                    </Link>
+                    <Link to="/Karykram">
+                      <label
+                        className="mobilehedermenu"
+                        onClick={scrollToTop}
+                      >
+                        <b>कार्यक्रम</b>
+                      </label>
+                    </Link>
+                    <Link to="/video">
+                      <label
+                        className="mobilehedermenu"
+                        onClick={scrollToTop}
+                      >
+                        <b>व्हिडिओ गॅलरी</b>
+                      </label>
+                    </Link>
                     {/* <label
                       className="mobilehedermenu"
                       onClick={() => handleClickScroll("facilities")}
@@ -160,12 +183,14 @@ const Header = () => {
                     >
                       video
                     </label> */}
-                    <label
-                      className="mobilehedermenu"
-                      onClick={() => handleClickScroll("contact")}
-                    >
-                      Contact
-                    </label>
+                    <Link to="/Sampark">
+                      <label
+                        className="mobilehedermenu"
+                        onClick={scrollToTop}
+                      >
+                        <b>संपर्क</b>
+                      </label>
+                    </Link>
                   </div>
                 </Drawer>
               </div>
